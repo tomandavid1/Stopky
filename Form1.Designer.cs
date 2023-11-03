@@ -1,4 +1,6 @@
-﻿namespace Stopky
+﻿using System.Drawing;
+
+namespace Stopky
 {
 	partial class StopkyWindow
 	{
@@ -43,6 +45,8 @@
 			// watchLabel
 			// 
 			watchLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+			watchLabel.BackColor = Color.FromArgb(0, 0, 0, 0);
+			watchLabel.FlatStyle = FlatStyle.Flat;
 			watchLabel.Font = new Font("Saira SemiBold", 60F, FontStyle.Bold, GraphicsUnit.Point);
 			watchLabel.Location = new Point(42, 31);
 			watchLabel.Name = "watchLabel";
@@ -118,6 +122,7 @@
 			panel1.Name = "panel1";
 			panel1.Size = new Size(485, 30);
 			panel1.TabIndex = 4;
+			panel1.Paint += panel1_Paint;
 			panel1.MouseDown += panel1_MouseDown;
 			// 
 			// button2
